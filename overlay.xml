@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories version="1.0">
+	<repo priority="50" status="unofficial">
+		<name>fureloka-overlay</name>
+		<description>Misc Gentoo ebuilds</description>
+		<homepage>http://fureloka.com/fureloka-overlay</homepage>
+		<owner>
+			<email>fureloka@gmail.com</email>
+			<name>Fredrick Lockert</name>
+		</owner>
+		<source type="git">git://github.com/fureloka/fureloka-overlay.git</source>
+		<feed>https://github.com/fureloka/fureloka-overlay/commits/master.atom</feed>
+	</repo>
+</repositories>
