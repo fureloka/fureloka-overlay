@@ -9,4 +9,3 @@ diff -urN a/src/wl/sys/wl_linux.c b/src/wl/sys/wl_linux.c
 +#define BRCM_WLAN_IFNAME wlan%d
  
  static char intf_name[IFNAMSIZ] = quote_str(BRCM_WLAN_IFNAME);
- 

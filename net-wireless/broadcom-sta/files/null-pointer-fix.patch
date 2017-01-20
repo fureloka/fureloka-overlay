@@ -9,4 +9,3 @@
 -		skb->prev = NULL;
  
  		TXQ_LOCK(wl);
- 

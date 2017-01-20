@@ -59,14 +59,14 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}/${PN}-6.30.223.141-makefile.patch" \
-		"${FILESDIR}/${PN}-6.30.223.141-eth-to-wlan.patch" \
-		"${FILESDIR}/${PN}-6.30.223.141-gcc.patch" \
-		"${FILESDIR}/${PN}-6.30.223.248-r3-Wno-date-time.patch" \
-		"${FILESDIR}/${PN}-6.30.223.271-r1-linux-3.18.patch" \
-		"${FILESDIR}/${PN}-6.30.223.271-r2-linux-4.3-v2.patch" \
+	    "${FILESDIR}/eth-to-wlan.patch" \
+	    "${FILESDIR}/fix-kernel-warnings.patch" \
 		"${FILESDIR}/linux-4.7.patch" \
-		"${FILESDIR}/linux-4.8.patch"
+		"${FILESDIR}/linux-4.8.patch" \
+		"${FILESDIR}/makefile.patch" \
+		"${FILESDIR}/null-pointer-fix.patch" \
+		"${FILESDIR}/rdtscl.patch" \
+		"${FILESDIR}/remove-time-and-date-macros.patch" 
 
 	epatch_user
 }
