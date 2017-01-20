@@ -4,6 +4,7 @@ fureloka-overlay
 Misc Gentoo ebuilds that I personally use, updated whenever I have time for it.
 Use at your own risk, YOLO!
 
+	app-editors/visual-studio-code : Code editor by Microsoft.
 	app-emulation/wine : Compatibility layer capable of running Windows applications on Linux.
 	app-misc/anki : Friendly, intelligent flash cards.
 	dev-python/pyaudio : Python bindings for PortAudio. (Required by Anki)
