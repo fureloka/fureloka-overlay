@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -10,16 +10,14 @@ PLOCALE_BACKUP="en"
 inherit autotools eutils fdo-mime flag-o-matic gnome2-utils l10n multilib multilib-minimal pax-utils toolchain-funcs virtualx versionator
 
 MAJOR_V="2.0"
-PACKAGE_V="2.0-rc6"
-S="${WORKDIR}/wine-${PACKAGE_V}"
-SRC_URI="https://dl.winehq.org/wine/source/${MAJOR_V}/wine-${PACKAGE_V}.tar.bz2"
+SRC_URI="https://dl.winehq.org/wine/source/${MAJOR_V}/${P}.tar.bz2"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
 
 VANILLA_GV="2.47"
 VANILLA_MV="4.6.4"
 STAGING_GV="2.47"
 STAGING_MV="4.6.4"
-STAGING_P="wine-staging-${PACKAGE_V}"
+STAGING_P="wine-staging-${PV}"
 STAGING_DIR="${WORKDIR}/${STAGING_P}"
 WINE_GENTOO="wine-gentoo-2015.03.07"
 DESCRIPTION="Free implementation of Windows(tm) on Unix"
@@ -42,7 +40,8 @@ SRC_URI="${SRC_URI}
 	https://dev.gentoo.org/~tetromino/distfiles/${PN}/${WINE_GENTOO}.tar.bz2"
 
 SRC_URI="${SRC_URI}
-staging? ( https://github.com/wine-compholio/wine-staging/archive/v${PACKAGE_V}.tar.gz -> ${STAGING_P}.tar.gz )"
+           https://github.com/wine-compholio/wine-staging/archive/v2.0.tar.gz
+staging? ( https://github.com/wine-compholio/wine-staging/archive/v${PV}.tar.gz -> ${STAGING_P}.tar.gz )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
