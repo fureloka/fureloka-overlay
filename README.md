@@ -12,3 +12,4 @@ Use at your own risk, YOLO!
 	x11-themes/arc-icon-themes : Icons for the Arc Theme.
 	x11-themes/arc-theme : A flat theme with transparent elements for GTK3.
 	x11-themes/moka-icon-theme : Fallback icon theme for Arc Icon Themes.
+	x11-wm/awesome : A highly configurable, next generation framework window manager for X
