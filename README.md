@@ -1,11 +1,9 @@
 #fureloka-overlay
-=================
 
 Misc Gentoo ebuilds that I personally use, updated whenever I have time for it.
 Use at your own risk, YOLO!
 
 ###Packages:
-============
 	app-editors/visual-studio-code : Code editor by Microsoft.
 	app-emulation/wine : Compatibility layer capable of running Windows applications on Linux.
 	app-misc/anki : Friendly, intelligent flash cards.
@@ -20,7 +18,6 @@ Use at your own risk, YOLO!
 	x11-wm/awesome : A highly configurable, next generation framework window manager for X.
 	
 ###Profiles:
-============
 	profiles/default/linux/amd64/13.0/desktop/awesome/systemd : Inherits desktop and systemd profiles.
 	
 	
