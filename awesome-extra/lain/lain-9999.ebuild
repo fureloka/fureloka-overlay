@@ -11,6 +11,7 @@ HOMEPAGE="https://github.com/copycat-killer/lain"
 
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/copycat-killer/lain.git"
+EGIT_SUBMODULES=()
 
 LICENSE="GNU-GPL2"
 SLOT="0"
