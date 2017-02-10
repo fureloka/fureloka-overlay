@@ -40,7 +40,7 @@ SRC_URI="${SRC_URI}
 	https://dev.gentoo.org/~tetromino/distfiles/${PN}/${WINE_GENTOO}.tar.bz2"
 
 SRC_URI="${SRC_URI}
-           https://github.com/wine-compholio/wine-staging/archive/v2.0.tar.gz
+           https://github.com/wine-compholio/wine-staging/archive/v2.1.tar.gz
 staging? ( https://github.com/wine-compholio/wine-staging/archive/v${PV}.tar.gz -> ${STAGING_P}.tar.gz )"
 
 LICENSE="LGPL-2.1"
@@ -115,8 +115,6 @@ COMMON_DEPEND="
 		dev-libs/libxml2[${MULTILIB_USEDEP}]
 		dev-libs/libxslt[${MULTILIB_USEDEP}]
 	)
-	
-	>=sys-devel/clang-3.8
 	
 	abi_x86_32? (
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
