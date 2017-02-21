@@ -14,4 +14,5 @@ Use at your own risk, YOLO!
 	
 ###Profiles:
 	profiles/default/linux/amd64/13.0/desktop/systemd : Combines desktop and systemd profiles.
+	profiles/default/linux/amd64/13.0/desktop/xfce/systemd : Combines desktop and systemd, with a custom xfce profile.
 	
