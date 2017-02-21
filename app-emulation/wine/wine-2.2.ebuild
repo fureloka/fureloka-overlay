@@ -40,7 +40,7 @@ SRC_URI="${SRC_URI}
 	https://dev.gentoo.org/~tetromino/distfiles/${PN}/${WINE_GENTOO}.tar.bz2"
 
 SRC_URI="${SRC_URI}
-           https://github.com/wine-compholio/wine-staging/archive/v2.1.tar.gz
+           https://github.com/wine-compholio/wine-staging/archive/v${PV}.tar.gz
 staging? ( https://github.com/wine-compholio/wine-staging/archive/v${PV}.tar.gz -> ${STAGING_P}.tar.gz )"
 
 LICENSE="LGPL-2.1"
