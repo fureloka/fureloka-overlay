@@ -5,7 +5,7 @@ Use at your own risk, YOLO!
 
 ### Packages:
 	app-editors/visual-studio-code : Code editor by Microsoft.
-	app-emulation/wine : Compatibility layer capable of running Windows applications on Linux.
+	app-emulation/wine-staging : Compatibility layer capable of running Windows applications on Linux.
 	app-misc/anki : Friendly, intelligent flash cards.
 	gnome-extra/nautilus-open-terminal: Nautilus plugin to open terminals in local folders / ssh.
 	net-wireless/broadcom-sta : Broadcom's IEEE 802.11a/b/g/n hybrid Linux device driver.
