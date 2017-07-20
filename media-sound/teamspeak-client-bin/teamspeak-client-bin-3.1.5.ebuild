@@ -24,7 +24,7 @@ RDEPEND="
 	dev-qt/qtgui:5[accessibility]
 	dev-qt/qtnetwork:5
 	dev-qt/qtsql:5[sqlite]
-	dev-qt/webengine:5
+	dev-qt/qtwebengine:5
 	dev-qt/qtwidgets:5
 	sys-libs/glibc
 	sys-libs/zlib
