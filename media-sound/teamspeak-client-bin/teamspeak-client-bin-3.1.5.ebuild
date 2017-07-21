@@ -23,6 +23,7 @@ RDEPEND="
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5[accessibility]
 	dev-qt/qtnetwork:5
+	dev-qt/qtsvg:5
 	dev-qt/qtsql:5[sqlite]
 	dev-qt/qtwebengine:5[widgets]
 	dev-qt/qtwidgets:5
