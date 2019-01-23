@@ -6,10 +6,14 @@ EAPI=6
 PLOCALES="ar bg ca cs da de el en en_US eo es fa fi fr he hi hr hu it ja ko lt ml nb_NO nl or pa pl pt_BR pt_PT rm ro ru sk sl sr_RS@cyrillic sr_RS@latin sv te th tr uk wa zh_CN zh_TW"
 PLOCALE_BACKUP="en"
 
-inherit autotools eapi7-ver estack eutils flag-o-matic gnome2-utils l10n multilib multilib-minimal pax-utils toolchain-funcs virtualx xdg-utils versionator
+inherit autotools eapi7-ver estack eutils flag-o-matic gnome2-utils l10n multilib multilib-minimal pax-utils toolchain-funcs virtualx xdg-utils #versionator
 
 MY_PN="${PN%%-*}"
-MY_P="${MY_PN}-$(replace_version_separator 2 '-')"
+MY_P="${MY_PN}-${PV}"
+
+# rc packages
+#MY_P="${MY_PN}-$(replace_version_separator 2 '-')"
+
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://source.winehq.org/git/wine.git"
@@ -24,7 +28,10 @@ else
 fi
 S="${WORKDIR}/${MY_P}"
 
-STAGING_P="wine-staging-$(replace_version_separator 2 '-')"
+# rc packages
+#STAGING_P="wine-staging-$(replace_version_separator 2 '-')"
+
+STAGING_P="wine-staging-${PV}"
 STAGING_DIR="${WORKDIR}/${STAGING_P}"
 GWP_V="20180120"
 PATCHDIR="${WORKDIR}/gentoo-wine-patches"
@@ -39,7 +46,10 @@ if [[ ${PV} == "9999" ]] ; then
 	STAGING_EGIT_REPO_URI="https://github.com/wine-staging/wine-staging.git"
 else
 	SRC_URI="${SRC_URI}
-	staging? ( https://github.com/wine-staging/wine-staging/archive/v$(replace_version_separator 2 '-').tar.gz -> ${STAGING_P}.tar.gz )"
+	staging? ( https://github.com/wine-staging/wine-staging/archive/v${PV}.tar.gz -> ${STAGING_P}.tar.gz )"
+	
+	#rc packages
+	#staging? ( https://github.com/wine-staging/wine-staging/archive/v$(replace_version_separator 2 '-').tar.gz -> ${STAGING_P}.tar.gz )"
 fi
 
 LICENSE="LGPL-2.1"
