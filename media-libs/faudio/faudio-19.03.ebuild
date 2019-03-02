@@ -11,6 +11,7 @@ DESCRIPTION="Accuracy-focused XAudio reimplementation for open platforms"
 HOMEPAGE="https://fna-xna.github.io/"
 
 SRC_URI="https://github.com/FNA-XNA/FAudio/archive/${PV}.tar.gz"
+KEYWORDS="~amd64 ~x86"
 
 LICENSE="ZLIB"
 SLOT="0"
