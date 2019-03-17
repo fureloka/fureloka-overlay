@@ -164,7 +164,7 @@ usr/share/applications/wine-uninstaller.desktop
 usr/share/applications/wine-winecfg.desktop"
 
 PATCHES=(
-	#"${PATCHDIR}/patches/${MY_PN}-1.5.26-winegcc.patch" #260726
+	"${FILESDIR}/patches/${MY_PN}-4.4-winegcc.patch"
 	"${PATCHDIR}/patches/${MY_PN}-1.9.5-multilib-portage.patch" #395615
 	"${PATCHDIR}/patches/${MY_PN}-1.6-memset-O3.patch" #480508
 	"${PATCHDIR}/patches/${MY_PN}-2.0-multislot-apploader.patch" #310611

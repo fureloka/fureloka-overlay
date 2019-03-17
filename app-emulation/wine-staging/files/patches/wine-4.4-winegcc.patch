@@ -1,0 +1,55 @@
+--- a/tools/winebuild/main.c
++++ b/tools/winebuild/main.c
+@@ -47,10 +47,13 @@
+ int force_pointer_size = 0;
+ int unwind_tables = 0;
+ 
++#undef FORCE_POINTER_SIZE
+ #ifdef __i386__
+ enum target_cpu target_cpu = CPU_x86;
++#define FORCE_POINTER_SIZE
+ #elif defined(__x86_64__)
+ enum target_cpu target_cpu = CPU_x86_64;
++#define FORCE_POINTER_SIZE
+ #elif defined(__powerpc__)
+ enum target_cpu target_cpu = CPU_POWERPC;
+ #elif defined(__arm__)
+@@ -619,6 +622,10 @@
+     signal( SIGTERM, exit_on_signal );
+     signal( SIGINT, exit_on_signal );
+ 
++#ifdef FORCE_POINTER_SIZE
++    force_pointer_size = sizeof(size_t);
++#endif
++
+     argv = parse_options( argc, argv, spec );
+     atexit( cleanup );  /* make sure we remove the output file on exit */
+
+
+--- a/tools/winegcc/winegcc.c
++++ b/tools/winegcc/winegcc.c
+@@ -222,10 +222,13 @@
+     strarray* files;
+ };
+ 
++#undef FORCE_POINTER_SIZE
+ #ifdef __i386__
+ static const enum target_cpu build_cpu = CPU_x86;
++#define FORCE_POINTER_SIZE
+ #elif defined(__x86_64__)
+ static const enum target_cpu build_cpu = CPU_x86_64;
++#define FORCE_POINTER_SIZE
+ #elif defined(__powerpc__)
+ static const enum target_cpu build_cpu = CPU_POWERPC;
+ #elif defined(__arm__)
+@@ -1325,6 +1328,10 @@
+     opts.compiler_args = strarray_alloc();
+     opts.winebuild_args = strarray_alloc();
+ 
++#ifdef FORCE_POINTER_SIZE
++    opts.force_pointer_size = sizeof(size_t);
++#endif
++
+     /* determine the processor type */
+     if (strendswith(argv[0], "winecpp")) opts.processor = proc_cpp;
+     else if (strendswith(argv[0], "++")) opts.processor = proc_cxx;
